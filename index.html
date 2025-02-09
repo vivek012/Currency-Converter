@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+  </head>
+  <body class="  flex  justify-center items-center  h-lvh bg-red-400">
+    <div class="  bg-white rounded-lg">
+      <h2 class=" rounded-t-lg font-bold text-4xl text-center text-white bg-yellow-700 p-3">
+        Currency Converter
+      </h2>
+      <form  class="  m-6 p-6 flex" action="">
+        <div class="">
+          <p class="font-bold text-xl">Enter Amount:</p>
+          <input class=" p-3 rounded-2xl  text-4xl my-2 w-96 border-2" value="1" type="text" />
+          <div class="mt-8 flex items-center justify-between dropdown">
+            <div class="from">
+              <p class="font-bold">From :</p>
+              <div class=" border-2 border-black-100 rounded-md flex ">
+                <img class=" mr-3 max-h-10" src="https://flagsapi.com/US/flat/64.png" alt=""/>
+                <select class=" cursor-pointer border-none flex w-3xl border-2" name="from" id="">
+                </select>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-right-arrow-left "></i>
+            <div class="to">
+              <p class="font-bold">To :</p>
+              <div class=" rounded-md border-2 border-black-100 flex">
+                <img class="mr-3 max-h-10" src="https://flagsapi.com/IN/flat/64.png" alt="" />
+                <select class="cursor-pointer border-none flex w-3xl " name="to" id="">
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class=" mssg mt-6  text-center"></div>
+          <button class="btn cursor-pointer h-12 bg-rose-400 text-white justify-center  m-auto rounded-xl w-40 flex mt-6  items-center  border-2" >Get Exchange Rate</button>
+        </div>
+      </form>
+    </div> 
+    <script src="codes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
