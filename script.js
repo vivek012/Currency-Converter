@@ -11,6 +11,7 @@ const btn = document.querySelector(".btn")
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
 const mssg = document.querySelector(".mssg")
+const switchCurrency = document.querySelector(".dropdown i")
 
 
 window.addEventListener("load", ()=>{
@@ -63,6 +64,11 @@ const updateExchangeRate = async ()=>{
     let data = await response.json();
     let rate = data[fromCurr.value.toLowerCase()]?.[toCurr.value. toLowerCase()];
     let finalAmount = amtVal * rate;
-    console.log(finalAmount)
     mssg.innerHTML = `${amount.value} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`
 }
+
+switchCurrency.addEventListener("click", ()=>{
+    let temp = fromCurr.value;
+    fromCurr.value = toCurr.value;
+    toCurr.value = temp;
+})
