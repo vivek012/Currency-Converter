@@ -71,4 +71,10 @@ switchCurrency.addEventListener("click", ()=>{
     let temp = fromCurr.value;
     fromCurr.value = toCurr.value;
     toCurr.value = temp;
+    updateFlag(fromCurr);
+    updateFlag(toCurr);   
+    updateExchangeRate(); 
+ 
+
+    
 })
